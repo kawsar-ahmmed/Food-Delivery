@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./component/Home/Home";
+
+
+export const BurgerContext = createContext();
 
 function App() {
+  const [burger, setBurger] = useState([]);
+  console.log(burger)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BurgerContext.Provider value={[burger, setBurger]}>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+      </Routes>
+    </BurgerContext.Provider>
   );
 }
 
