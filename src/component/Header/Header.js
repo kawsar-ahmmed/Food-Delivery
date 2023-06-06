@@ -5,13 +5,13 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className='bg-white'>
+        <div className='bg-white sticky top-0 z-0'>
             <nav className='container mx-auto py-4 sticky'>
                 <div className="menu flex text-center justify-between items-center" >
                     <div className="menu-img">
                         <NavLink to='/home'><img src={logo} alt="" className='h-12' /></NavLink>
                     </div>
-                    <div className="menu-contnt space-x-4  ">
+                    <div className="menu-contnt space-x-4">
                         <NavLink to='/home'>Home</NavLink>
                         <NavLink to='/shop'>Shop</NavLink>
                         <NavLink to='/login'>Login</NavLink>

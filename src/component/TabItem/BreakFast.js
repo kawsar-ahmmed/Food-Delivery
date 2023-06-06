@@ -1,17 +1,15 @@
 import React, { useContext } from 'react';
 import { BurgerContext } from '../../App';
-import './TabItem.css'
 
-
-const Launch = () => {
+const BreakFast = () => {
     const [burger] = useContext(BurgerContext);
-    const lunchItems = burger.lunch;
-    console.log(lunchItems)
+    const breakfast = burger.breakfast;
+    console.log(breakfast)
     return (
         <div className=' min-w-full grid gap-4 grid-cols-3'>
             {
-                Array.isArray(lunchItems) ? (
-                    lunchItems.map((item) => (
+                Array.isArray(breakfast) ? (
+                    breakfast.map((item) => (
                         <div className='lunch-items my-8'>
                             <img src={item.imgUrl} alt="" className='img-fluid m-auto' />
                             <h2 className='text-2xl'>{item.title}</h2>
@@ -26,4 +24,4 @@ const Launch = () => {
     );
 };
 
-export default Launch;
+export default BreakFast;
