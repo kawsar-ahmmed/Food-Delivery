@@ -13,7 +13,7 @@ const Header = () => {
                     </div>
                     <div className="menu-contnt space-x-4">
                         <NavLink to='/home'>Home</NavLink>
-                        <NavLink to='/shop'>Shop</NavLink>
+                        <NavLink to='/cart'>Cart</NavLink>
                         <NavLink to='/login'>Login</NavLink>
                     </div>
                 </div>

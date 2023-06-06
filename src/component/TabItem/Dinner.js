@@ -10,10 +10,13 @@ const Dinner = () => {
             {
                 Array.isArray(dinner) ? (
                     dinner.map((item) => (
-                        <div className='lunch-items my-8'>
-                            <img src={item.imgUrl} alt="" className='img-fluid m-auto' />
-                            <h2 className='text-2xl'>{item.title}</h2>
-                            <p className='text-base text-orange-500'>${item.price}</p>
+                        <div className='lunch-items my-8 '>
+                            <div className="items-full ">
+                                <img src={item.imgUrl} alt="" className='img-fluid m-auto' />
+                                <h2 className='text-2xl'>{item.title}</h2>
+                                <p className='text-base text-orange-500'>${item.price}</p>
+                                <button className='py-2 my-4 px-6 bg-orange-400 text-white rounded'>Add To Cart</button>
+                            </div>
                         </div>
                     ))
                 ) : (
